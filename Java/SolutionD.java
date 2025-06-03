@@ -1,10 +1,6 @@
 package Java;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
-
-public class Solution4 {
+public class SolutionD {
     public String shortestPalindrome(String s){
 
         //function shortestPalindrome(s: string): string {
