@@ -11,7 +11,10 @@ public class SolutionD {
         //        return t.slice(0, i) + s;
         //      }
         //    }
-        //
+        //https://leetcode.com/problems/shortest-palindrome/description/
+        //https://leetcode.com/problems/patching-array/
+        //https://leetcode.com/problems/department-top-three-salaries/description/
+        //https://leetcode.com/problems/shortest-palindrome/description/
         //    return t + s;
         //};
         //String[] t = s.split("");
