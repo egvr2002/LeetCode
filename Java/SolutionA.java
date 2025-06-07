@@ -1,41 +1,19 @@
 package Java;
 
 public class SolutionA {
-    //
-    //class Solution:
-    //def maxProfit(self, prices: List[int]) -> int:
-    // sellTwo = 0
-    // holdTwo = -math.inf
-    // sellOne = 0
-    // holdOne = -math.inf
+    public int maxProfit(int[] prices) {
+        int finalSell = 0;
+        int finalBuy = Integer.MIN_VALUE;
+        int firstSell = 0;
+        int firstBuy = Integer.MIN_VALUE;
 
-    // for price in prices:
-    //    sellTwo = max(sellTwo, holdTwo + price)
-    //    holdTwo = max(holdTwo, sellOne - price)
-    //    sellOne = max(sellOne, holdOne + price)
-    //    holdOne = max(holdOne , -price)
+        for (int quote : prices) {
+            finalSell = Math.max(finalSell, finalBuy + quote);
+            finalBuy = Math.max(finalBuy, firstSell - quote);
+            firstSell = Math.max(firstSell, firstBuy + quote);
+            firstBuy = Math.max(firstBuy, -quote);
+        }
 
-    // return sellTwo
-    //
-    //
-    //
-    //
-    //
-    //
-    //class Solution:
-    //def maxProfit(self, prices: List[int]) -> int:
-    // sellTwo = 0
-    // holdTwo = math.inf
-    // sellOne = 0
-    // holdOne = math.inf
-
-    // for price in prices:
-    //    sellTwo = min(sellTwo, holdTwo - price)
-    //    holdTwo = min(holdTwo, sellOne + price)
-    //    sellOne = min(sellOne, holdOne - price)
-    //    holdOne = min(holdOne , price)
-
-    // return -sellTwo
-
-    //
+        return finalSell;
+    }
 }
